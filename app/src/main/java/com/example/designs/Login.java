@@ -23,7 +23,7 @@ public class Login extends AppCompatActivity implements FBAuthHelper.FBReply {
     private EditText EtP;
     private Button BtnL;
     private Button BtnS;
-    private FBAuthHelper fbAuthHelper;
+    private FBAuthHelper fbAuthHelper;///
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
