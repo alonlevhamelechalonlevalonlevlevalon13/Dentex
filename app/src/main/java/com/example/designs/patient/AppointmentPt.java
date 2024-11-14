@@ -14,12 +14,15 @@ import com.example.designs.R;
 
 public class AppointmentPt extends BaseActivity {
     private String s1 = "All";
+    private String sI;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_appointment_pt);
         menus();
+        Button buttonDoc = findViewById(R.id.buttonDoc);
+        buttonDoc.setEnabled(false);
         Button button = findViewById(R.id.button);
         Button button1 = findViewById(R.id.buttonSubmit);
         button1.setEnabled(false);
@@ -44,6 +47,7 @@ public class AppointmentPt extends BaseActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         button.setText(item.getTitle());
                         s1 = item.getTitle().toString();
+                        buttonDoc.setEnabled(true);
                         return true;
                     }
                 });
@@ -52,8 +56,6 @@ public class AppointmentPt extends BaseActivity {
                 popupMenu.show();
             }
         });
-        Button buttonDoc = findViewById(R.id.buttonDoc);
-
         buttonDoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,7 +101,7 @@ public class AppointmentPt extends BaseActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         buttonDoc.setText(item.getTitle());
                         button1.setEnabled(true);
-                        s1 = item.getTitle().toString();
+                        sI = item.getTitle().toString();
                         return true;
                     }
                 });
@@ -112,7 +114,7 @@ public class AppointmentPt extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AppointmentPt.this,NextAppointmentPt.class);
-                intent.putExtra("DOC_NAME",s1);
+                intent.putExtra("DOC_NAME",sI);
                 startActivity(intent);
             }
         });
