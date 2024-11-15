@@ -11,6 +11,7 @@ import androidx.activity.EdgeToEdge;
 
 import com.example.designs.BaseActivity;
 import com.example.designs.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AppointmentPt extends BaseActivity {
     private String s1 = "All";
@@ -21,6 +22,8 @@ public class AppointmentPt extends BaseActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_appointment_pt);
         menus();
+        BottomNavigationView bnav = findViewById(R.id.bNav);
+        bnav.setSelectedItemId(R.id.page_2);
         Button buttonDoc = findViewById(R.id.buttonDoc);
         buttonDoc.setEnabled(false);
         Button button = findViewById(R.id.button);

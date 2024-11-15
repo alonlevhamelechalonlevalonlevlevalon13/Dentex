@@ -43,7 +43,6 @@ public class FBAuthHelper {
                             if(fbReply != null)
                                 fbReply.createUserSuccess(user);
                         } else {
-                            //TODO להקפיץ טוסט כוסעמק
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
                         }
                     }

@@ -19,5 +19,7 @@ public class Main_Page extends BaseActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main_page_pt);
         menus();
+        BottomNavigationView bnav = findViewById(R.id.bNav);
+        bnav.setSelectedItemId(R.id.page_3);
     }
 }

@@ -30,8 +30,9 @@ public class Login extends AppCompatActivity implements FBAuthHelper.FBReply {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         fbAuthHelper = new FBAuthHelper(this, this);
-        if (fbAuthHelper.getCurrentUser() != null)
+        if (fbAuthHelper.isLoggedIn()){
             startActivity(new Intent(this, Main_Page.class));
+        }
         EtE = findViewById(R.id.ETE);
         EtP = findViewById(R.id.ETP);
         BtnS = findViewById(R.id.BtnS);
@@ -42,8 +43,6 @@ public class Login extends AppCompatActivity implements FBAuthHelper.FBReply {
                 email = EtE.getText().toString();
                 pass = EtP.getText().toString();
                 fbAuthHelper.createUser(email, pass);
-                startActivity(new Intent(Login.this,Main_Page.class));
-
             }
         });
         BtnL.setOnClickListener(new View.OnClickListener() {
@@ -51,13 +50,7 @@ public class Login extends AppCompatActivity implements FBAuthHelper.FBReply {
             public void onClick(View v) {
                 email =  EtE.getText().toString();
                 pass = EtP.getText().toString();
-                if (email.isEmpty() || pass.isEmpty()) {
-                    Toast.makeText(Login.this, "Please enter both email and password", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Toast.makeText(Login.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(Login.this,Main_Page.class));
-                }
+                fbAuthHelper.login(email,pass);
             }
         });
 
@@ -70,7 +63,6 @@ public class Login extends AppCompatActivity implements FBAuthHelper.FBReply {
 
     @Override
     public void createUserSuccess(FirebaseUser user) {
-
         startActivity(new Intent(this, Main_Page.class));
     }
 

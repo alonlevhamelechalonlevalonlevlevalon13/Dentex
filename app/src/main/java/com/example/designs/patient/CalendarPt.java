@@ -24,6 +24,8 @@ public class CalendarPt extends BaseActivity implements PtAppointmentAdapter.Ite
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_calendar_pt);
         menus();
+        BottomNavigationView bnav = findViewById(R.id.bNav);
+        bnav.setSelectedItemId(R.id.page_1);
         ArrayList<String> TreatmentType = new ArrayList<>();
         TreatmentType.add("תור קבוע🤪");
         TreatmentType.add("תור קבוע🤪");

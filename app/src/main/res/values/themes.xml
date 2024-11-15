@@ -6,4 +6,17 @@
     </style>
 
     <style name="Theme.Designs" parent="Base.Theme.Designs" />
+    <style name="Theme.App" parent="Theme.MaterialComponents">
+        ...
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+    </style>
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorPrimary">#8DEEFD</item>
+        <item name="colorOnPrimary">#2F4F54</item>
+    </style>
 </resources>

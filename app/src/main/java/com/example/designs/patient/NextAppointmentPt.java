@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.designs.BaseActivity;
 import com.example.designs.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -21,6 +22,8 @@ public class NextAppointmentPt extends BaseActivity implements PtAppointmentAdap
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_next_appointment_pt);
         menus();
+        BottomNavigationView bnav = findViewById(R.id.bNav);
+        bnav.setSelectedItemId(R.id.page_2);
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if(extras == null) {

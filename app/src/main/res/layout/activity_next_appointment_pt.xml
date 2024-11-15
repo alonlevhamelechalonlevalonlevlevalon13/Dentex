@@ -57,14 +57,13 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bNav"
+        style="@style/Widget.App.BottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#8DEEFD"
-        app:itemIconSize="49dp"
-        app:itemIconTint="#123564"
-        app:itemPaddingBottom="10dp"
-        app:itemTextColor="#123564"
         android:layout_alignParentBottom="true"
+        app:itemIconSize="30dp"
+        app:itemPaddingBottom="3dp"
+        app:itemPaddingTop="4dp"
         app:menu="@menu/menu_patient" />
 
 </LinearLayout>
