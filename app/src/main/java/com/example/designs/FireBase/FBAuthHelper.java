@@ -2,6 +2,7 @@ package com.example.designs.FireBase;
 
 import android.app.Activity;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -61,7 +62,9 @@ public class FBAuthHelper {
                                 fbReply.loginSuccess(user);
                         } else {
                             // If sign in fails, display a message to the user.
+                            Toast.makeText(activity,"log in failed",Toast.LENGTH_SHORT).show();
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
+
                         }
                     }
                 });

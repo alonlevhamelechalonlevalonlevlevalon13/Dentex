@@ -21,7 +21,6 @@ public class NextAppointmentPt extends BaseActivity implements PtAppointmentAdap
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_next_appointment_pt);
-        menus();
         BottomNavigationView bnav = findViewById(R.id.bNav);
         bnav.setSelectedItemId(R.id.page_2);
         if (savedInstanceState == null) {

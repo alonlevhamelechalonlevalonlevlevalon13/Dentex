@@ -36,6 +36,17 @@
         android:textColor="#8deefd"
         android:textColorHint="#8DEEFD" />
 
+    <EditText
+        android:id="@+id/ETP2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="אשר סיסמה"
+        android:inputType="textPassword"
+        android:textColor="#8deefd"
+        android:textColorHint="#8DEEFD" />
+
     <Button
         android:id="@+id/BtnL"
         android:layout_width="match_parent"

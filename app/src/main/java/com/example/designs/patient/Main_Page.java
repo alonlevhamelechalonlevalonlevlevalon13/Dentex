@@ -15,10 +15,10 @@ public class Main_Page extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState,R.layout.activity_main_page_pt);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main_page_pt);
-        menus();
+        //setContentView(R.layout.activity_main_page_pt);
+        //menus();
         BottomNavigationView bnav = findViewById(R.id.bNav);
         bnav.setSelectedItemId(R.id.page_3);
     }

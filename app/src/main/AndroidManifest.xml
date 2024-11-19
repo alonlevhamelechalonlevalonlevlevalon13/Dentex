@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Designs">
         <activity
-            android:name=".BaseActivity"
-            android:exported="false" />
-        <activity
             android:name=".doctor.CalendarDr"
             android:exported="false" />
         <activity
@@ -32,9 +29,10 @@
         <activity
             android:name=".doctor.ShiftsRequests"
             android:exported="false" />
-        <activity android:name=".doctor.DrShifts" />
+        <activity android:name=".doctor.DrShifts"
+            android:exported="false"/>
         <activity
-            android:name=".patient.Main_Page"
+            android:name=".LoadingScreen"
             android:exported="false" />
         <activity
             android:name=".clinic.OfficeCalendar"
@@ -43,7 +41,7 @@
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".LoadingScreen"
+            android:name=".patient.Main_Page"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

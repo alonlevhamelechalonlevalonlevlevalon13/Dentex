@@ -21,7 +21,6 @@ public class AppointmentPt extends BaseActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_appointment_pt);
-        menus();
         BottomNavigationView bnav = findViewById(R.id.bNav);
         bnav.setSelectedItemId(R.id.page_2);
         Button buttonDoc = findViewById(R.id.buttonDoc);

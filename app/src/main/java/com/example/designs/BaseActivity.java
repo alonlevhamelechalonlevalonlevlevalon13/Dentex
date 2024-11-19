@@ -20,14 +20,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BaseActivity extends AppCompatActivity {
     private FBAuthHelper fbAuthHelper;
+
+    void BaseActivity(){
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-    }
-    public void menus (){
         BottomNavigationView bottomNavigationView = findViewById(R.id.bNav);
-
         // Set the menu items to the BottomNavigationView
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
             @Override
